@@ -1,0 +1,114 @@
+
+h1 {
+  text-align: center;  
+}
+
+h2 {
+  text-align: center; 
+}
+
+
+p {
+  text-align: center;
+}
+
+div#tip {
+  text-align: center;
+  margin: auto;
+  width: 60%;
+  height: 30px;
+  font-size: 15pt;
+}
+
+div#wall {
+  text-align: center;
+  margin: auto;
+  width: 10%;
+  height: 30px;
+  border: 1px solid black;
+  background-color: #DDDDDD;
+}
+
+div#maze {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 50%;
+  height: 400px;
+  font-size: 0;
+}
+
+div.obstacle, div#start, div#end {
+  position: absolute;
+  display: inline-block;
+  background-color: #DDDDDD;
+}
+
+div#top_obstacle {
+  /*width: 100%;*/
+  height: 16%;
+  top: 0;
+  right: 0;
+  left: 0;
+  border: 1px solid black;
+}
+
+div#left_obstacle {
+  width: 28%;
+  height: 50%;
+  top: 16%;
+  left: 0%;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+div#right_obstacle {
+  width: 28%;
+  height: 50%;
+  top: 16%;
+  right: 0%;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+div#bottom_obstacle {
+  width: 100%;
+  height:20%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 1px solid black;
+}
+
+div#mid_obstacle {
+  width: 20%;
+  height: 50%;
+  top: 30%;
+  left: 40%;
+  right: 40%;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+div#start {
+  width: 10%;
+  height: 12%;
+  bottom: 21%;
+  font-size: 25pt;
+  text-align: center; 
+  background-color: #00FF00;
+  border: 1px solid black;
+}
+
+div#end {
+  width: 10%;
+  height: 12%;
+  bottom: 21%;
+  right: 0;
+  font-size: 25pt;
+  text-align: center; 
+  background-color: #9900FF;
+  border: 1px solid black;
+}

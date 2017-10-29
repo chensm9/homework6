@@ -1,0 +1,75 @@
+h1 {
+  text-align: center;  
+}
+
+h2 {
+  text-align: center; 
+}
+
+div#data {
+  position: relative;
+  width: 40%;
+  height: 70px;
+  margin: auto;
+  font-weight: bold;
+}
+
+button#switch {
+  height: 40%;
+}
+
+span {
+  display: inline-block;
+  border: 1px solid gray;
+  padding: 1%;
+}
+
+span#time, span#score {
+  width: 40%;
+}
+
+span#status {
+  position: absolute;
+  width: 30%;
+  left: 0;
+  bottom: 0;
+}
+
+div#TimeBlock, div#ScoreBlock {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  width: 30%;
+  margin: 0;
+}
+
+div#TimeBlock {
+  top: 0;
+}
+
+div#ScoreBlock {
+  bottom: 0;
+}
+
+table {
+  border: 3px solid gray;
+  border-left: 0;
+  border-right: 0;
+  margin: 20px auto auto auto;
+}
+
+button.mole {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid gray;
+  margin: 10px;
+  outline: 0;
+}
+
+ol {
+  width: 50%;
+  margin: 20px auto auto auto;
+  font-weight: bold;
+}
