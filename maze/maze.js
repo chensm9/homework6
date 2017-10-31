@@ -1,11 +1,10 @@
-function Failed() {
+function Clear() {
   var obstacle = document.getElementsByClassName("obstacle");
   for(var i = 0; i < obstacle.length; i++) {
     obstacle[i].onmouseover = function(event) {
       //do nothing
     }
   }
-  document.getElementById("tip").textContent = "You Lose!!";
 }
 
 window.onload = function () {
@@ -15,6 +14,9 @@ window.onload = function () {
 
   maze.onmouseleave = function(event) {
     ifCheat = true;
+    for(var i = 0; i < obstacle.length; i++) {
+      obstacle[i].style.backgroundColor = "#DDDDDD";
+    }
   }
 
   var start = document.getElementById("start");
@@ -27,19 +29,20 @@ window.onload = function () {
       obstacle[i].style.backgroundColor = "#DDDDDD";
       obstacle[i].onmouseover = function(event) {
         this.style.backgroundColor = "red";
-        Failed();
+        Clear();
+        document.getElementById("tip").textContent = "You Lose!!";
       }
     }
   }
 
   end.onmouseover = function(event) {
     if(document.getElementById("tip").textContent == ""&&ifCheat) {
-      Failed();
+      Clear();
       document.getElementById("tip").textContent = 
         "Don't cheat, you should start from the 'S' and move to the inside the maze!";
     }
     else if(document.getElementById("tip").textContent == "") {
-      Failed();
+      Clear();
       document.getElementById("tip").textContent = "You Win!!";
     }
   }
