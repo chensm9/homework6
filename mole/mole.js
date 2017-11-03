@@ -1,3 +1,11 @@
+function hasClass(element,csName){
+  return element.className.match(RegExp('(\\s|^)'+csName+'(\\s|$)'));
+}　
+ 
+function addClass(element,csName){
+  if(!hasClass(element,csName))
+    element.className += ' '+csName;
+}
 
 function gameStart(){
   document.getElementById("status").textContent = "Playing";
@@ -5,9 +13,8 @@ function gameStart(){
   for(var i = 0; i < mole.length; i++) {
     mole[i].onclick = function(){
       var score = parseInt(document.getElementById("score").textContent);
-      if(this.style.borderColor == "blue") {
-        this.style.borderColor = "gray";
-        this.style.borderWidth = "1px";
+      if(hasClass(this, "blue_mole")) {
+        this.className = "mole";
         RandomButton();
         document.getElementById("score").textContent = score + 1;
       }
@@ -25,9 +32,8 @@ function gameOver() {
   document.getElementById("status").textContent = "Game Over";
   var mole = document.getElementsByClassName("mole");
   for(var i = 0; i < mole.length; i++) {
-    if(mole[i].style.borderColor == "blue") {
-      mole[i].style.borderColor = "gray";
-      mole[i].style.borderWidth = "1px";
+    if(hasClass(mole[i], "blue_mole")) {
+      mole[i].className = "mole";
     }
     mole[i].onclick = function(){
         //do nothing
@@ -40,8 +46,7 @@ function gameOver() {
 function RandomButton() {
   var num = Math.round(Math.random()*59);
   var mole = document.getElementsByClassName("mole");
-  mole[num].style.borderColor = "blue";
-  mole[num].style.borderWidth = "3px";
+  addClass(mole[num], "blue_mole");
 }
 
 window.onload = function() {

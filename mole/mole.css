@@ -68,6 +68,10 @@ button.mole {
   outline: 0;
 }
 
+button.blue_mole {
+  border: 3px solid blue;
+}
+
 ol {
   width: 50%;
   margin: 20px auto auto auto;
