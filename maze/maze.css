@@ -14,8 +14,7 @@ p {
 
 div#tip {
   text-align: center;
-  margin: auto;
-  width: 60%;
+  width: 100%;
   height: 30px;
   font-size: 15pt;
 }
@@ -42,6 +41,10 @@ div.obstacle, div#start, div#end {
   position: absolute;
   display: inline-block;
   background-color: #DDDDDD;
+}
+
+div.red_obstacle {
+  background-color: red;
 }
 
 div#top_obstacle {

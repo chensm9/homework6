@@ -1,3 +1,12 @@
+function hasClass(element,csName){
+  return element.className.match(RegExp('(\\s|^)'+csName+'(\\s|$)'));
+ }　
+ 
+function addClass(element,csName){
+  if(!hasClass(element,csName))
+    element.className+=' '+csName;
+}
+
 function Clear() {
   var obstacle = document.getElementsByClassName("obstacle");
   for(var i = 0; i < obstacle.length; i++) {
@@ -15,7 +24,7 @@ window.onload = function () {
   maze.onmouseleave = function(event) {
     ifCheat = true;
     for(var i = 0; i < obstacle.length; i++) {
-      obstacle[i].style.backgroundColor = "#DDDDDD";
+      obstacle[i].className = "obstacle";
     }
   }
 
@@ -26,9 +35,9 @@ window.onload = function () {
     ifCheat = false;
     document.getElementById("tip").textContent = "";
     for(var i = 0; i < obstacle.length; i++) {
-      obstacle[i].style.backgroundColor = "#DDDDDD";
+      obstacle[i].className = "obstacle";
       obstacle[i].onmouseover = function(event) {
-        this.style.backgroundColor = "red";
+        addClass(this, "red_obstacle");
         Clear();
         document.getElementById("tip").textContent = "You Lose!!";
       }
